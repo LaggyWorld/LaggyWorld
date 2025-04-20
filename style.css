@@ -134,4 +134,14 @@ footer {
   position: relative;
   top: -3px; 
 }
+.floating-logo {
+  width: 150px; /* or whatever size you want */
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
 
