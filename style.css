@@ -105,6 +105,7 @@ footer {
 
 .home-button {
   display: inline-block;
+  right: 2px; 
   margin: 2rem auto 0 auto;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -120,6 +121,7 @@ footer {
 .home-button:hover {
   transform: scale(1.05);
   background-color: #66bb6a;
+
 }
 
 .home-button:focus,
