@@ -107,7 +107,7 @@ footer {
   border: 3px solid #666;
   margin: 2rem auto;
   padding: 1rem;
-  max-width: 250px;
+  max-width: 500px;
   border-radius: 8px;
   box-shadow: 0 4px 0 #1c1c1c;
   position: relative; /* Make the card a positioning container */
