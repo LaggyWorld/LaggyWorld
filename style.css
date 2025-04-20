@@ -135,7 +135,7 @@ footer {
   top: -3px; 
 }
 .floating-logo {
-  width: 150px; /* or whatever size you want */
+  width: 325px; /* or whatever size you want */
   animation: float 3s ease-in-out infinite;
 }
 
