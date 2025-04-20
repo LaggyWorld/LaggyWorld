@@ -1,37 +1,27 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Press Start 2P', cursive;
-  background-color: #1e1e1e;
+  background-color: #2e2e2e;
   color: #f0f0f0;
-  text-align: center;
   line-height: 1.5;
+  text-align: center;
   image-rendering: pixelated;
-}
 
-a {
-  color: #00ffff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  /* 🗡️ Custom Cursor */
+  cursor: url('https://cur.cursors-4u.net/games/gam-11/gam1026.cur'), auto;
 }
 
 header {
-  background: linear-gradient(to bottom, #4CAF50, #2e7d32);
+  background: linear-gradient(to bottom, #4CAF50, #3e8e41);
   padding: 2rem 1rem;
+  border-bottom: 5px solid #2e7d32;
   box-shadow: 0 4px 0 #1b5e20;
-  border-bottom: 4px solid #145a25;
 }
 
 header h1 {
+  font-size: 2rem;
   margin: 0.5rem 0;
-  font-size: 1.5rem;
   color: #fff;
 }
 
@@ -41,78 +31,69 @@ header p {
 }
 
 .player-count {
-  background-color: #111;
+  background-color: #222;
+  padding: 0.5rem;
   display: inline-block;
-  padding: 0.5rem 1rem;
-  font-size: 0.7rem;
-  color: #00ff00;
   border: 2px solid #00ff00;
+  color: #00ff00;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
 }
 
-/* Cards */
 .card {
-  background-color: #2b2b2b;
+  background-color: #3a3a3a;
+  border: 3px solid #666;
   margin: 2rem auto;
-  padding: 1.5rem;
-  max-width: 600px;
-  border: 4px solid #444;
+  padding: 1rem;
+  max-width: 500px;
   border-radius: 8px;
-  box-shadow: 0 4px 0 #111;
+  box-shadow: 0 4px 0 #1c1c1c;
 }
 
 .card h2 {
   font-size: 1rem;
-  color: #ffeb3b;
-  margin-bottom: 1rem;
+  color: #ffd700;
 }
 
 .card p,
 .card code {
   font-size: 0.7rem;
-  color: #ddd;
-  word-break: break-word;
+  color: #ccc;
 }
 
-/* Donate Button */
 .donate-button {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 1.2rem;
-  font-size: 0.7rem;
-  color: #fff;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
   background-color: #ff9800;
   border: 3px solid #e65100;
-  text-shadow: 1px 1px #000;
+  color: #fff;
   text-decoration: none;
-  transition: transform 0.2s ease;
+  font-size: 0.8rem;
+  transition: transform 0.2s;
 }
 
 .donate-button:hover {
   transform: scale(1.05);
 }
 
-/* Footer */
 footer {
-  background-color: #121212;
+  background-color: #111;
   padding: 1rem;
   font-size: 0.6rem;
-  color: #999;
+  color: #777;
 }
 
-/* Mobile Responsive */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.2rem;
-  }
 
-  .card {
-    padding: 1rem;
-    margin: 1rem;
-  }
+#babaYegg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease;
+}
 
-  .donate-button {
-    width: 90%;
-    box-sizing: border-box;
-  }
+#babaYegg img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.5s ease;
 }
