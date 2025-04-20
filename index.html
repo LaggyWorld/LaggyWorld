@@ -8,6 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Star background container -->
+  <div class="stars" id="starContainer"></div>
+
   <header>
     <div class="player-count" id="playerCount">Loading...</div>
     <h1>🟩 LaggyWorld 🟫</h1>
@@ -57,6 +60,17 @@
       } catch (error) {
         document.getElementById('playerCount').textContent = "⚠️ Error";
       }
+    }
+
+    // Star field generator
+    const starContainer = document.getElementById("starContainer");
+    for (let i = 0; i < 150; i++) {
+      const star = document.createElement("div");
+      star.classList.add("star");
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDelay = `${Math.random() * 5}s`;
+      starContainer.appendChild(star);
     }
 
     getPlayerCount();
