@@ -83,3 +83,14 @@ footer {
   font-size: 0.6rem;
   color: #777;
 }
+.footer-terms-link {
+  font-size: 0.8rem;
+  color: #77cc77; 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-terms-link:hover {
+  color: #f9c74f;
+  text-decoration: underline;
+}
