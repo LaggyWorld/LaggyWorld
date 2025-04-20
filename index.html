@@ -27,7 +27,7 @@
 
     <section class="card">
       <h2>💖 Support LaggyWorld</h2>
-      <button class="donate-button" onclick="toggleDonationModal()">Donate</button>
+      <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank" class="donate-button">Donate via PayPal</a>
     </section>
 
     <section class="card">
@@ -39,20 +39,6 @@
   <footer>
     <p>© 2025 LaggyWorld. Crafted with ❤️ and blocks.</p>
   </footer>
-
-  <!-- Donation Modal -->
-  <div id="donationModal" class="modal">
-    <div class="modal-content">
-      <span class="close-button" onclick="toggleDonationModal()">&times;</span>
-      <h2>💰 Donate to LaggyWorld</h2>
-      <p>Running LaggyWorld takes time, love, and… a bit of money. If you enjoy the server and want to keep it running (or help it grow), feel free to throw a few blocks our way.</p>
-      <p>
-        <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" target="_blank" class="donate-button">Donate via PayPal</a>
-      </p>
-      <p>Or support us via Ko-fi: <a href="https://ko-fi.com/YOUR_KOFI_USERNAME" target="_blank">ko-fi.com/YOUR_KOFI_USERNAME</a></p>
-      <p class="note">Every donation helps us keep LaggyWorld online and awesome. Thank you!</p>
-    </div>
-  </div>
 
   <script>
     async function getPlayerCount() {
@@ -70,18 +56,6 @@
         }
       } catch (error) {
         document.getElementById('playerCount').textContent = "⚠️ Error";
-      }
-    }
-
-    function toggleDonationModal() {
-      const modal = document.getElementById('donationModal');
-      modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById('donationModal');
-      if (event.target === modal) {
-        modal.style.display = "none";
       }
     }
 
