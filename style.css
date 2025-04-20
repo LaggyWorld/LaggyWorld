@@ -56,7 +56,6 @@
 .modal-content a:hover {
   text-decoration: underline;
 }
-/* Starry background */
 body::before {
   content: "";
   position: fixed;
