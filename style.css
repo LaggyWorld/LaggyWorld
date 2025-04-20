@@ -114,7 +114,7 @@ footer {
 .home-button {
   position: absolute;
   top: 50%;
-  right: 3px; /* Adjusts how far from the right edge it is */
+  right: 5px; /* Adjusts how far from the right edge it is */
   transform: translateY(-50%);
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
