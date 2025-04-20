@@ -106,8 +106,8 @@ footer {
 .button-container {
   position: absolute;
   height: 300px;
-  margin-top: 50px;
-  margin-left: 20px;
+  top: 50px;
+  left: 20px;
   width: auto;
 }
 
