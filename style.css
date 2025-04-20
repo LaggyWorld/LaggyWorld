@@ -1,99 +1,100 @@
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.85);
-  animation: fadeIn 0.3s ease-in-out;
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.modal-content {
-  background-color: #2e2e2e;
-  margin: 10% auto;
-  padding: 2rem;
-  border: 2px solid #00ff88;
-  border-radius: 12px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 2px 12px rgba(0, 255, 136, 0.4);
-  position: relative;
-  color: #d0f0c0;
+body {
   font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #330000, #660000, #ff3300, #ff9900);
+  background-size: 300% 300%;
+  animation: fireFlow 8s ease-in-out infinite;
 }
 
-.close-modal {
-  color: #00ff88;
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
+@keyframes fireFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.close-modal:hover {
-  color: #00cc6a;
+/* Header & Footer */
+header, footer {
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-.modal-content h2 {
-  color: #00ff88;
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.modal-content a {
-  color: #00ffcc;
+header p {
+  font-size: 0.75rem;
+}
+
+.player-count {
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+  color: #ffff99;
+}
+
+/* Main Content */
+main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #ff6600;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(255, 102, 0, 0.4);
+}
+
+.card h2 {
+  color: #ffcc00;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card p, .card a {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #fff2cc;
+}
+
+.card code {
+  background: #111;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #ffcc66;
+}
+
+.donate-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: #ff6600;
+  color: #fff;
   text-decoration: none;
+  font-size: 0.75rem;
+  border-radius: 8px;
+  transition: background 0.3s;
 }
 
-.modal-content a:hover {
-  text-decoration: underline;
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: -1;
-  pointer-events: none;
-  animation: starryNight 60s linear infinite;
+.donate-button:hover {
+  background: #cc3300;
 }
 
-.stars {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  overflow: hidden;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.star {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #fff;
-  border-radius: 50%;
-  animation: flicker 3s infinite ease-in-out;
-}
-
-@keyframes flicker {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 1; }
-}
-
-@keyframes starryNight {
-  0% { background-position: 0 0; }
-  100% { background-position: -10000px 10000px; }
+footer p {
+  font-size: 0.65rem;
+  color: #ffcc99;
 }
