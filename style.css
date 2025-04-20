@@ -103,6 +103,12 @@ footer {
   text-decoration: underline;
 }
 
+.button-container {
+  position: relative;
+  height: 200px:
+  width: 100%;
+}
+
 .home-button {
   position: absolute;
   top: 50%;
