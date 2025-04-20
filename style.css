@@ -106,18 +106,17 @@ footer {
 
 .button-container {
   position: relative;
-  margin-top: -1.5rem; /* Pulls it slightly closer to the header */
-  padding-top: 1rem;
-  margin-left: 5px;
-  height: auto;
-  width: auto;
+  margin: 0 auto;
+  margin-top: -10px; /* Pull it slightly under the green header */
+  padding: 0.5rem 1rem;
+  width: fit-content;
   background-color: #1e1e1e;
   border: 2px dashed #555;
 }
 
 .home-button {
-  position: static; /* Let it flow normally */
-  margin-top: 0.5rem;
+  display: inline-block;
+  margin: 0;
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -132,3 +131,4 @@ footer {
   transform: scale(1.05);
   background-color: #66bb6a;
 }
+
