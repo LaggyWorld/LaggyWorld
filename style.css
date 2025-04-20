@@ -7,8 +7,7 @@ body {
   line-height: 1.5;
   text-align: center;
   image-rendering: pixelated;
-
-
+}
 
 header {
   background: linear-gradient(to bottom, #4CAF50, #3e8e41);
@@ -36,6 +35,7 @@ header p {
 .site-title:hover {
   text-shadow: 0 0 5px #00ff00;
 }
+
 .player-count {
   background-color: #222;
   padding: 0.5rem;
@@ -51,9 +51,10 @@ header p {
   border: 3px solid #666;
   margin: 2rem auto;
   padding: 1rem;
-  max-width: 500px;
+  max-width: 600px;
   border-radius: 8px;
   box-shadow: 0 4px 0 #1c1c1c;
+  position: relative; /* Needed for absolute-positioned home-button */
 }
 
 .card h2 {
@@ -89,6 +90,7 @@ footer {
   font-size: 0.6rem;
   color: #777;
 }
+
 .footer-terms-link {
   font-size: 0.8rem;
   color: #77cc77; 
@@ -100,22 +102,11 @@ footer {
   color: #f9c74f;
   text-decoration: underline;
 }
-.card {
-  background-color: #3a3a3a;
-  border: 3px solid #666;
-  margin: 2rem auto;
-  padding: 1rem;
-  max-width: 600px;
-  border-radius: 8px;
-  box-shadow: 0 4px 0 #1c1c1c;
-  position: relative; /* Make the card a positioning container */
-}
 
 .home-button {
   position: absolute;
-  top: 50%;
-  right: 2px; /* Adjusts how far from the right edge it is */
-  transform: translateY(-50%);
+  top: -20px;         /* Visually outside the card */
+  right: -20px;
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -126,18 +117,17 @@ footer {
   transition: transform 0.2s, background-color 0.3s;
 
   outline: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 
 .home-button:hover {
-  transform: translateY(-50%) scale(1.05);
+  transform: scale(1.05);
   background-color: #66bb6a;
 }
 
 .home-button:focus,
 .home-button:active {
   outline: none !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
-
-
