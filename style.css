@@ -124,6 +124,9 @@ footer {
   text-decoration: none;
   font-family: 'Press Start 2P', cursive;
   transition: transform 0.2s, background-color 0.3s;
+
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .home-button:hover {
@@ -133,7 +136,8 @@ footer {
 
 .home-button:focus,
 .home-button:active {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
+
 
