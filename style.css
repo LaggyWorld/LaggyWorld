@@ -129,3 +129,7 @@ footer {
   outline: none;
   box-shadow: none;
 }
+.big-emoji {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
