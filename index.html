@@ -62,12 +62,6 @@
       }
     }
 
-    function updateBabaYeggScale(playersOnline) {
-      const egg = document.querySelector('#babaYegg img');
-      const scale = 1 + (playersOnline * 0.05);
-      egg.style.transform = `scale(${scale})`;
-    }
-
     getPlayerCount();
     setInterval(getPlayerCount, 30000);
   </script>
