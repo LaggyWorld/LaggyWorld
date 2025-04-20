@@ -30,6 +30,14 @@ header p {
   color: #c8ffc8;
 }
 
+.site-title {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  text-shadow: 0 0 5px #00ff00;
+}
 .player-count {
   background-color: #222;
   padding: 0.5rem;
