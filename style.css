@@ -106,8 +106,8 @@ footer {
 
 .button-container {
   position: absolute;
-  top: 40px;
-  left: 15px;
+  top: 20px;
+  left: 25px;
   height: auto; 
   width: auto;
   background-color: #1e1e1e;
@@ -116,8 +116,8 @@ footer {
 
 .home-button {
   position: absolute;
-  top: 75%;
-  right: 10px; 
+  top: calc(50% - 20px);
+  right: 5px; 
   transform: translateY(-50%);
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
