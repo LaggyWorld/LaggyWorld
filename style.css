@@ -129,38 +129,3 @@ footer {
   outline: none;
   box-shadow: none;
 }
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-    text-shadow: none;
-  }
-  20% {
-    transform: translate(-2px, 2px);
-    text-shadow: -2px 0 red, 2px 0 blue;
-  }
-  40% {
-    transform: translate(2px, -2px);
-    text-shadow: 2px 0 red, -2px 0 blue;
-  }
-  60% {
-    transform: translate(-1px, 1px);
-    text-shadow: -1px 0 red, 1px 0 blue;
-  }
-  80% {
-    transform: translate(1px, -1px);
-    text-shadow: 1px 0 red, -1px 0 blue;
-  }
-  100% {
-    transform: translate(0);
-    text-shadow: none;
-  }
-}
-
-.laggy-title {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 3.5em;
-  color: white;
-  animation: glitch 0.9s infinite;
-  position: relative;
-  text-align: center;
-}
