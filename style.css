@@ -104,21 +104,17 @@ footer {
 }
 
 .home-button {
-  position: absolute;
-  top: -20px;         /* Visually outside the card */
-  right: -20px;
-  padding: 0.8rem 1.5rem;
+  display: inline-block;
+  margin: 2rem auto 0 auto;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
   color: #fff;
   font-size: 0.8rem;
   text-decoration: none;
   font-family: 'Press Start 2P', cursive;
+  padding: 0.8rem 1.5rem;
   transition: transform 0.2s, background-color 0.3s;
-
-  outline: none !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  z-index: 10;
+  box-shadow: 0 4px 0 #1b5e20;
 }
 
 .home-button:hover {
@@ -129,5 +125,6 @@ footer {
 .home-button:focus,
 .home-button:active {
   outline: none !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: none !important;
 }
+
