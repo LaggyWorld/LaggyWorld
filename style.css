@@ -105,6 +105,7 @@ footer {
 
 .home-button {
   display: inline-block;
+  top: 50%
   right: 2px; 
   margin: 2rem auto 0 auto;
   background-color: #4caf50;
