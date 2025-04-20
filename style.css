@@ -130,3 +130,10 @@ footer {
   transform: translateY(-50%) scale(1.05);
   background-color: #66bb6a;
 }
+
+.home-button:focus,
+.home-button:active {
+  outline: none;
+  box-shadow: none;
+}
+
