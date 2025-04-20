@@ -105,18 +105,16 @@ footer {
 }
 
 .button-container {
-  position: relative;
-  margin: 0 auto;
-  margin-top: -10px; /* Pull it slightly under the green header */
-  padding: 0.5rem 1rem;
-  width: fit-content;
+  display: inline-block;
+  margin: -10px 0 0 25px; /* up slightly and aligned left */
+  padding: 0.5rem;
   background-color: #1e1e1e;
   border: 2px dashed #555;
+  position: relative;
 }
 
 .home-button {
   display: inline-block;
-  margin: 0;
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -132,3 +130,8 @@ footer {
   background-color: #66bb6a;
 }
 
+.home-button:focus,
+.home-button:active {
+  outline: none;
+  box-shadow: none;
+}
