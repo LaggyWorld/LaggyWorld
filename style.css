@@ -7,6 +7,7 @@ body {
   line-height: 1.5;
   text-align: center;
   image-rendering: pixelated;
+  position: relative;
 }
 
 header {
@@ -54,7 +55,7 @@ header p {
   max-width: 600px;
   border-radius: 8px;
   box-shadow: 0 4px 0 #1c1c1c;
-  position: relative; /* Needed for absolute-positioned home-button */
+  position: relative;
 }
 
 .card h2 {
@@ -93,7 +94,7 @@ footer {
 
 .footer-terms-link {
   font-size: 0.8rem;
-  color: #77cc77; 
+  color: #77cc77;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -103,26 +104,21 @@ footer {
   text-decoration: underline;
 }
 
-
-body {
-  position: relative; 
-}
-
 .button-container {
   position: absolute;
-  top: 20px;    
-  left: 20px;   
-  height: 300px;
+  top: 20px;
+  left: 20px;
+  height: auto; 
   width: auto;
-  background-color: #1e1e1e; 
-  border: 2px dashed #555; 
+  background-color: #1e1e1e;
+  border: 2px dashed #555;
 }
 
 .home-button {
   position: absolute;
   top: 50%;
   right: 5px; 
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
