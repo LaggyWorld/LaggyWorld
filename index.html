@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LaggyWorld</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Star background container -->
-  <div class="stars" id="starContainer"></div>
 
   <header>
     <div class="player-count" id="playerCount">Loading...</div>
@@ -62,19 +60,9 @@
       }
     }
 
-    // Star field generator
-    const starContainer = document.getElementById("starContainer");
-    for (let i = 0; i < 150; i++) {
-      const star = document.createElement("div");
-      star.classList.add("star");
-      star.style.top = `${Math.random() * 100}%`;
-      star.style.left = `${Math.random() * 100}%`;
-      star.style.animationDelay = `${Math.random() * 5}s`;
-      starContainer.appendChild(star);
-    }
-
     getPlayerCount();
     setInterval(getPlayerCount, 30000);
   </script>
+
 </body>
 </html>
