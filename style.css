@@ -156,6 +156,7 @@ footer {
   align-items: center;
   justify-content: center;
   z-index: 10000;
+  animation: fadeIn 0.4s ease-in;
 }
 
 .popup-box {
@@ -167,6 +168,7 @@ footer {
   max-width: 400px;
   text-align: center;
   font-size: 0.7rem;
+  box-shadow: 0 0 12px #00ff00;
 }
 
 .popup-box h2 {
@@ -175,16 +177,10 @@ footer {
   color: #00ff00;
 }
 
-.popup-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem 0;
-  text-align: left;
-}
-
-.popup-box ul li {
-  margin: 0.5rem 0;
-  font-size: 0.7rem;
+.popup-box p {
+  font-size: 0.65rem;
+  color: #ccc;
+  margin-bottom: 1rem;
 }
 
 .popup-box button {
@@ -196,8 +192,14 @@ footer {
   font-size: 0.6rem;
   cursor: pointer;
   transition: background-color 0.2s;
+  box-shadow: 0 0 8px #00ff00;
 }
 
 .popup-box button:hover {
   background-color: #44ff44;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
