@@ -106,8 +106,8 @@ footer {
 
 .floating-home-button {
   position: absolute;
-  top: 120px; /* Moves it just below the green header */
-  left: 25px; /* Adjust left spacing */
+  top: 130px; /* Adjust as needed to place just under the green */
+  left: 25px;  /* Adjust for horizontal position */
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
