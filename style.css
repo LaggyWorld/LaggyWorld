@@ -104,10 +104,10 @@ footer {
   text-decoration: underline;
 }
 
-.home-button {
+.floating-home-button {
   position: absolute;
-  top: 115px; /* adjust to sit just under green header */
-  left: 25px; /* small offset from the left */
+  top: 115px; /* tweak this to move it up/down */
+  left: 25px; /* tweak this to move it left/right */
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -116,16 +116,17 @@ footer {
   text-decoration: none;
   font-family: 'Press Start 2P', cursive;
   transition: transform 0.2s, background-color 0.3s;
-  z-index: 999; /* makes sure it's above other content */
+  z-index: 9999; /* stays on top */
 }
 
-.home-button:hover {
+.floating-home-button:hover {
   transform: scale(1.05);
   background-color: #66bb6a;
 }
 
-.home-button:focus,
-.home-button:active {
+.floating-home-button:focus,
+.floating-home-button:active {
   outline: none;
   box-shadow: none;
 }
+
