@@ -1,3 +1,4 @@
+/* Existing styles (what you already had) */
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: #1e1e1e;
@@ -13,6 +14,7 @@ header {
   text-align: center;
   padding: 3rem 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 header h1 {
@@ -71,6 +73,7 @@ footer {
   background-color: #111;
   margin-top: 2rem;
 }
+
 .player-count {
   position: absolute;
   top: 10px;
@@ -84,6 +87,28 @@ footer {
   font-family: 'Press Start 2P', cursive;
 }
 
-header {
-  position: relative;
+/* 💸 Donation-specific styles */
+.donate-button {
+  display: inline-block;
+  background-color: #00ff88;
+  color: #000;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 255, 100, 0.2);
+}
+
+.donate-button:hover {
+  background-color: #00cc6a;
+}
+
+.note {
+  font-size: 0.7rem;
+  color: #cccccc;
+  margin-top: 1.5rem;
+  line-height: 1.4;
 }
