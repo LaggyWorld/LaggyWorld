@@ -1,100 +1,58 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Press Start 2P', cursive;
-  color: #fff;
-  overflow-x: hidden;
-  position: relative;
-  min-height: 100vh;
-  background: linear-gradient(45deg, #330000, #660000, #ff3300, #ff9900);
-  background-size: 300% 300%;
-  animation: fireFlow 8s ease-in-out infinite;
-}
-
-@keyframes fireFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Header & Footer */
-header, footer {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 0.75rem;
-}
-
-.player-count {
-  font-size: 0.75rem;
-  margin-bottom: 1rem;
-  color: #ffff99;
-}
-
-/* Main Content */
-main {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-.card {
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.85);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: 2px solid #ff6600;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: #2e2e2e;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 2px solid #00ff88;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(255, 102, 0, 0.4);
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 12px rgba(0, 255, 136, 0.4);
+  position: relative;
+  color: #d0f0c0;
+  font-family: 'Press Start 2P', cursive;
 }
 
-.card h2 {
-  color: #ffcc00;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.close-modal {
+  color: #00ff88;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
 }
 
-.card p, .card a {
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: #fff2cc;
+.close-modal:hover {
+  color: #00cc6a;
 }
 
-.card code {
-  background: #111;
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: #ffcc66;
+.modal-content h2 {
+  color: #00ff88;
 }
 
-.donate-button {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.6rem 1rem;
-  background: #ff6600;
-  color: #fff;
+.modal-content a {
+  color: #00ffcc;
   text-decoration: none;
-  font-size: 0.75rem;
-  border-radius: 8px;
-  transition: background 0.3s;
 }
 
-.donate-button:hover {
-  background: #cc3300;
-}
-
-footer p {
-  font-size: 0.65rem;
-  color: #ffcc99;
+.modal-content a:hover {
+  text-decoration: underline;
 }
