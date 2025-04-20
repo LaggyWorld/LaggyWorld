@@ -13,6 +13,7 @@
     <h1>🟩 LaggyWorld 🟫</h1>
     <p>Welcome to the most chaotic Minecraft experience.</p>
   </header>
+
   <main>
     <section class="card">
       <h2>🌍 About the Server</h2>
@@ -33,6 +34,15 @@
       <h2>📞 Discord</h2>
       <p>Have questions or need help? Reach us at <a href="https://discord.gg/2f5PEQA8SV">Discord@laggyworld.net</a></p>
     </section>
+
+    
+    <section class="card">
+      <h2>🥚 Baba Yegg</h2>
+      <div id="babaYegg">
+        <img src="https://i.imgur.com/EOZQ4v1.png" alt="Baba Yegg" />
+        <p>He watches... 👀</p>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -50,12 +60,20 @@
           const players = data.players.online;
           const max = data.players.max;
           countElement.textContent = `👥 ${players} / ${max}`;
+
+          updateBabaYeggScale(players);
         } else {
           countElement.textContent = "🔴 Offline";
         }
       } catch (error) {
         document.getElementById('playerCount').textContent = "⚠️ Error";
       }
+    }
+
+    function updateBabaYeggScale(playersOnline) {
+      const egg = document.querySelector('#babaYegg img');
+      const scale = 1 + (playersOnline * 0.05);
+      egg.style.transform = `scale(${scale})`;
     }
 
     getPlayerCount();
