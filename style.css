@@ -106,8 +106,8 @@ footer {
 
 .floating-home-button {
   position: absolute;
-  top: 130px; /* Adjust as needed to place just under the green */
-  left: 25px;  /* Adjust for horizontal position */
+  top: 115px; /* tweak this to move it up/down */
+  left: 25px; /* tweak this to move it left/right */
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -116,7 +116,7 @@ footer {
   text-decoration: none;
   font-family: 'Press Start 2P', cursive;
   transition: transform 0.2s, background-color 0.3s;
-  z-index: 9999;
+  z-index: 9999; /* stays on top */
 }
 
 .floating-home-button:hover {
