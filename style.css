@@ -86,7 +86,6 @@ footer {
   font-family: 'Press Start 2P', cursive;
 }
 
-/* 💸 Donation-specific styles */
 .donate-button {
   display: inline-block;
   background-color: #00ff88;
@@ -110,4 +109,63 @@ footer {
   color: #cccccc;
   margin-top: 1.5rem;
   line-height: 1.4;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background-color: #2e2e2e;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 2px solid #00ff88;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 12px rgba(0, 255, 136, 0.4);
+  position: relative;
+  color: #d0f0c0;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.close-modal {
+  color: #00ff88;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.close-modal:hover {
+  color: #00cc6a;
+}
+
+.modal-content h2 {
+  color: #00ff88;
+}
+
+.modal-content a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
 }
