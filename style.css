@@ -104,11 +104,11 @@ footer {
 }
 
 .button-container {
-  position: relative;
-  height: 500px:
-  width: 100%;
+  position: absolute;
+  height: 300px:
   margin-top: 50px;
   margin-left: 20px;
+  width: auto;
 }
 
 .home-button {
