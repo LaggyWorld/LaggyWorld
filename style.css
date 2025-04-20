@@ -103,19 +103,26 @@ footer {
   text-decoration: underline;
 }
 
+
+body {
+  position: relative; 
+}
+
 .button-container {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 20px;    
+  left: 20px;   
   height: 300px;
   width: auto;
+  background-color: #1e1e1e; 
+  border: 2px dashed #555; 
 }
 
 .home-button {
   position: absolute;
   top: 50%;
-  right: 5px; /* Adjusts how far from the right edge it is */
-  transform: translateY(-50%);
+  right: 5px; 
+  transform: translateY(-50%); 
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -136,4 +143,3 @@ footer {
   outline: none;
   box-shadow: none;
 }
-
