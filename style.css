@@ -102,3 +102,33 @@ footer {
   color: #f9c74f;
   text-decoration: underline;
 }
+.card {
+  background-color: #3a3a3a;
+  border: 3px solid #666;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 0 #1c1c1c;
+  position: relative; /* Make the card a positioning container */
+}
+
+.home-button {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjusts how far from the right edge it is */
+  transform: translateY(-50%);
+  padding: 0.8rem 1.5rem;
+  background-color: #4caf50;
+  border: 3px solid #2e7d32;
+  color: #fff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-family: 'Press Start 2P', cursive;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.home-button:hover {
+  transform: translateY(-50%) scale(1.05);
+  background-color: #66bb6a;
+}
