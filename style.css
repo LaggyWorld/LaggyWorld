@@ -8,7 +8,7 @@ body {
   text-align: center;
   image-rendering: pixelated;
 
-  /* 🗡️ Custom Cursor */
+
   cursor: url('https://cur.cursors-4u.net/games/gam-11/gam1026.cur'), auto;
 }
 
@@ -82,18 +82,4 @@ footer {
   padding: 1rem;
   font-size: 0.6rem;
   color: #777;
-}
-
-
-#babaYegg {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.5s ease;
-}
-
-#babaYegg img {
-  width: 50px;
-  height: auto;
-  transition: transform 0.5s ease;
 }
