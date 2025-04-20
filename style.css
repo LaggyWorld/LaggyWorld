@@ -56,3 +56,45 @@
 .modal-content a:hover {
   text-decoration: underline;
 }
+/* Starry background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  pointer-events: none;
+  animation: starryNight 60s linear infinite;
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation: flicker 3s infinite ease-in-out;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+@keyframes starryNight {
+  0% { background-position: 0 0; }
+  100% { background-position: -10000px 10000px; }
+}
