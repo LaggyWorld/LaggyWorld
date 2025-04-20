@@ -105,20 +105,19 @@ footer {
 }
 
 .button-container {
-  position: absolute;
-  top: 20px;
-  left: 25px;
-  height: auto; 
+  position: relative;
+  margin-top: -1.5rem; /* Pulls it slightly closer to the header */
+  padding-top: 1rem;
+  margin-left: 25px;
+  height: auto;
   width: auto;
   background-color: #1e1e1e;
   border: 2px dashed #555;
 }
 
 .home-button {
-  position: absolute;
-  top: calc(50% - 20px);
-  right: 5px; 
-  transform: translateY(-50%);
+  position: static; /* Let it flow normally */
+  margin-top: 0.5rem;
   padding: 0.8rem 1.5rem;
   background-color: #4caf50;
   border: 3px solid #2e7d32;
@@ -130,12 +129,6 @@ footer {
 }
 
 .home-button:hover {
-  transform: translateY(-50%) scale(1.05);
+  transform: scale(1.05);
   background-color: #66bb6a;
-}
-
-.home-button:focus,
-.home-button:active {
-  outline: none;
-  box-shadow: none;
 }
