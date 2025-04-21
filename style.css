@@ -1,3 +1,240 @@
+/* === BASE STYLES === */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  line-height: 1.6;
+  text-align: center;
+  image-rendering: pixelated;
+  position: relative;
+  overflow-x: hidden;
+  opacity: 0;
+  transform: scale(0.98);
+  animation: fadeInZoom 0.6s ease forwards;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+header {
+  background: linear-gradient(145deg, #4CAF50, #2e7d32);
+  padding: 2.5rem 1rem 2rem;
+  border-bottom: 4px solid #1b5e20;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+header p {
+  font-size: 0.9rem;
+  color: #c8ffc8;
+}
+
+.site-title {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  text-shadow: 0 0 6px #00ff00;
+}
+
+.player-count {
+  background-color: #181818;
+  padding: 0.7rem 1.2rem;
+  display: inline-block;
+  border: 2px solid #00ff00;
+  border-radius: 6px;
+  color: #00ff00;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background-color: #2a2a2a;
+  border: 2px solid #444;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 850px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: #ffeb3b;
+}
+
+.card p,
+.card code {
+  font-size: 0.75rem;
+  color: #d0d0d0;
+}
+
+.donate-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #ff9800;
+  border: 2px solid #e65100;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  touch-action: manipulation;
+}
+
+.donate-button:hover {
+  transform: scale(1.08);
+  background-color: #ffa733;
+}
+
+footer {
+  background-color: #111;
+  padding: 1.5rem 1rem;
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.footer-terms-link {
+  font-size: 0.8rem;
+  color: #77cc77;
+  text-decoration: none;
+}
+
+.footer-terms-link:hover {
+  color: #f9c74f;
+  text-decoration: underline;
+}
+
+.floating-home-button {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  padding: 0.7rem 1.2rem;
+  background-color: #4caf50;
+  border: 2px solid #2e7d32;
+  color: #fff;
+  font-size: 0.75rem;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: transform 0.2s ease, background-color 0.3s;
+  z-index: 9999;
+  touch-action: manipulation;
+}
+
+.floating-home-button:hover {
+  transform: scale(1.05);
+  background-color: #66bb6a;
+}
+
+.floating-logo {
+  width: 300px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.popup-box {
+  background-color: #262626;
+  color: #fff;
+  padding: 2rem;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 0.8rem;
+  box-shadow: 0 0 20px #00ff00;
+}
+
+.popup-box h2 {
+  font-size: 1.1rem;
+  color: #00ff00;
+  margin-bottom: 1rem;
+}
+
+.popup-box p {
+  font-size: 0.7rem;
+  color: #ccc;
+}
+
+.popup-box button {
+  background-color: #00ff00;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 0 10px #00ff00;
+  touch-action: manipulation;
+}
+
+.popup-box button:hover {
+  background-color: #33ff66;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.big-emoji {
+  font-size: 1.5em;
+  position: relative;
+  top: -3px;
+}
+
+a {
+  color: #00ff00;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #66ff66;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+
+/* === RESPONSIVE MOBILE STYLES === */
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 1.4rem;
