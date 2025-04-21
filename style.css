@@ -201,3 +201,12 @@ footer {
   position: relative;
   top: -3px;
 }
+a {
+  color: #00ff00;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #66ff66;
+  text-shadow: 0 0 5px #00ff00;
