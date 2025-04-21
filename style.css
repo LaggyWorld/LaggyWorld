@@ -53,6 +53,21 @@ body {
   }
 }
 
+.player-count {
+  background-color: #181818;
+  padding: 0.7rem 1.2rem;
+  display: inline-block;
+  border: 2px solid #00ff00;
+  border-radius: 6px;
+  color: #00ff00;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  text-align: left; 
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+}
+
 header {
   background: linear-gradient(145deg, #4CAF50, #2e7d32);
   padding: 2.5rem 1rem 2rem;
