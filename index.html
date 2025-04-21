@@ -68,6 +68,35 @@
   <a href="privacy-policy.html">Privacy</a>
 </footer>
 
+<a href="terms-of-service.html" class="link">terms-of-service</a>
+
+<style>
+.fade-out {
+  animation: fadeOut 0.4s forwards;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('a.link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 400);
+    });
+  });
+});
+</script>
+
+
 <script>
   function closePopup() {
     document.getElementById("rulesPopup").style.display = "none";
