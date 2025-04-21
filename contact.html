@@ -3,17 +3,38 @@
     <form
       action="https://formspree.io/f/xdkgnelb"
       method="POST"
-      style="display: flex; flex-direction: column; gap: 10px;"
+      class="contact-form"
     >
-      <label for="email">Your Email:</label>
+      <label for="email">📧 Your Email</label>
       <input type="email" name="email" id="email" required>
   
-      <label for="message">Your Message:</label>
-      <textarea name="message" id="message" rows="5" required></textarea>
+      <label for="message">📝 Your Message</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
   
-      <button type="submit" style="padding: 10px; background-color: #00ff00; color: black; border: none; font-family: 'Press Start 2P', cursive; cursor: pointer;">
-        Send
-      </button>
+      <!-- Honeypot anti-bot trap -->
+      <input type="text" name="_gotcha" style="display:none">
+  
+      <button type="submit">🚀 Send Message</button>
     </form>
   </section>
+  
+  <script>
+    document.querySelector('.contact-form').addEventListener('submit', function (e) {
+      const email = document.getElementById('email').value.toLowerCase();
+      const fakeDomains = [
+        'tempmail.com',
+        '10minutemail.com',
+        'mailinator.com',
+        'dispostable.com',
+        'fakeinbox.com',
+        'guerrillamail.com',
+        'trashmail.com'
+      ];
+  
+      if (fakeDomains.some(domain => email.endsWith('@' + domain))) {
+        alert('🚫 Please use a real email address, not a temporary one.');
+        e.preventDefault();
+      }
+    });
+  </script>
   

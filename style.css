@@ -242,22 +242,57 @@ body {
     transform: scale(1);
   }
 }
-form input,
-form textarea {
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   font-family: 'Press Start 2P', cursive;
-  padding: 10px;
-  background-color: black;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
   color: #00ff00;
+  font-size: 0.75em;
+  text-shadow: 1px 1px #000;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #111;
   border: 2px solid #00ff00;
-  width: 100%;
-}
-
-form label {
+  color: #00ff00;
+  padding: 12px;
+  font-size: 0.75em;
   font-family: 'Press Start 2P', cursive;
-  color: #ffffff;
+  width: 100%;
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
-form button:hover {
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #bbff00;
+}
+
+.submit-button {
+  background-color: #00ff00;
+  color: black;
+  border: 2px solid #00ff00;
+  padding: 15px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-button:hover {
   background-color: #bbff00;
+  color: #000;
 }
 
