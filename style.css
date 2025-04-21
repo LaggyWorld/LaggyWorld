@@ -156,7 +156,7 @@ footer {
 }
 
 .floating-logo {
-  width: 10px;
+  width: auto;
   height: auto;
   animation: float 3s ease-in-out infinite;
 }
