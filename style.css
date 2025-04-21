@@ -53,7 +53,7 @@ body {
   }
 }
 
-#playerCount {
+.player-count {
   background-color: #181818;
   padding: 0.7rem 1.2rem;
   display: inline-block;
