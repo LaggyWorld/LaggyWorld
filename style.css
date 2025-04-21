@@ -47,7 +47,7 @@ header {
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 0.5rem 0;
   color: #fff;
 }
@@ -119,7 +119,7 @@ header p {
 footer {
   background-color: #111;
   padding: 1.5rem 1rem;
-  font-size: 1.7rem;
+  font-size: 0.7rem;
   color: #888;
 }
 
@@ -156,8 +156,7 @@ footer {
 }
 
 .floating-logo {
-  width: auto;
-  height: auto;
+  width: 300px;
   animation: float 3s ease-in-out infinite;
 }
 
