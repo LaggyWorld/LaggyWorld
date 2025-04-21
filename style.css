@@ -46,6 +46,20 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .player-count {
+    font-size: 14px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .player-count {
+    font-size: 14px;
+    margin: 20px;
+  }
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 12px;
