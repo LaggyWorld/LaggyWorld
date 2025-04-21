@@ -11,10 +11,17 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    margin: 20px;
+  }
+}
+
 @media (max-width: 480px) {
-  .popup-box {
-    width: 90%;
-    padding: 1rem;
+  body {
+    font-size: 12px;
+    margin: 10px;
   }
 }
 
