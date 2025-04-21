@@ -11,6 +11,13 @@ body {
   overflow-x: hidden;
 }
 
+@media (max-width: 480px) {
+  .popup-box {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+
 header {
   background: linear-gradient(145deg, #4CAF50, #2e7d32);
   padding: 2.5rem 1rem 2rem;
