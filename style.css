@@ -32,6 +32,20 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .floating-logo {
+    font-size: 14px;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-logo {
+    font-size: 14px;
+    margin: 20px;
+  }
+}
+
 @media (max-width: 480px) {
   html {
     font-size: 12px;
