@@ -242,3 +242,22 @@ body {
     transform: scale(1);
   }
 }
+form input,
+form textarea {
+  font-family: 'Press Start 2P', cursive;
+  padding: 10px;
+  background-color: black;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  width: 100%;
+}
+
+form label {
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+}
+
+form button:hover {
+  background-color: #bbff00;
+}
+
