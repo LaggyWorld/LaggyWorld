@@ -96,24 +96,19 @@
 </script>
 
 <script>
-  function openPopup() {
-    document.getElementById('popup').style.display = 'flex';
-    document.body.classList.add('popup-open');
-  }
-  
   function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-    document.body.classList.remove('popup-open');
+    document.getElementById("rulesPopup").style.display = "none";
   }
-  
-  
+
   window.addEventListener("load", () => {
-    if (!sessionStorage.getItem("popupShown")) {
-      openPopup();
-      sessionStorage.setItem("popupShown", "true");
+    if (!sessionStorage.getItem("rulesShown")) {
+      document.getElementById("rulesPopup").style.display = "flex";
+      sessionStorage.setItem("rulesShown", "true");
+    } else {
+      document.getElementById("rulesPopup").style.display = "none";
     }
   });
-  </script>
+</script>
 
 <script>
   async function getPlayerCount() {
