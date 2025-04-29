@@ -138,12 +138,12 @@ header p {
 
 .popup-overlay {
   position: fixed;
-  top: 20px;  
+  top: 20px; 
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  display: flex;  
+  display: flex; 
   align-items: center;
   justify-content: center;
   z-index: 9999;
@@ -160,17 +160,6 @@ header p {
   animation: laggyMove 1s infinite alternate;
 }
 
-.popup-title {
-  color: #ff5050;
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.popup-message {
-  color: #cccccc;
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
 
 .popup-button {
   background: #ff5050;
@@ -197,7 +186,6 @@ body.popup-open > *:not(.popup-overlay) {
   pointer-events: none;
 }
 
-/* Animations for Lag Effect */
 @keyframes laggyMove {
   0% { transform: rotate(-1deg) translateX(0px); }
   100% { transform: rotate(1deg) translateX(2px); }

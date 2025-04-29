@@ -104,14 +104,14 @@
   function closePopup() {
     document.getElementById("rulesPopup").style.display = "none";
     document.body.classList.remove("popup-open");
+    sessionStorage.setItem("rulesShown", "true");
   }
   
   window.addEventListener("load", () => {
     if (!sessionStorage.getItem("rulesShown")) {
-      openPopup();
-      sessionStorage.setItem("rulesShown", "true");
+      openPopup();  
     } else {
-      closePopup();
+      document.getElementById("rulesPopup").style.display = "none"; 
     }
   });
   </script>
