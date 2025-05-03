@@ -1,18 +1,14 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Press Start 2P', cursive;
-  background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  background-size: cover;
-  animation: fadeInZoom 0.6s ease forwards, starScroll 60s linear infinite;
-  color: #f5f5f5;
-  line-height: 1.6;
-  text-align: center;
-  image-rendering: pixelated;
-  position: relative;
-  overflow-x: hidden;
-  opacity: 0;
-  transform: scale(0.98);
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  background-color: #000;
+  z-index: -1;
+  animation: starScroll 60s linear infinite;
 }
 
 html {
@@ -32,15 +28,12 @@ html {
 }
 
 header {
-  background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  background-size: cover;
-  animation: starScroll 120s linear infinite;
-  padding: 3rem 1rem 2.5rem;
-  border-bottom: 4px solid #222;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, #0d0d0d 0%, rgba(0,0,0,0.8) 100%);
+  backdrop-filter: blur(3px);
+  z-index: 2;
   position: relative;
-  z-index: 1;
 }
+
 
 @keyframes starScroll {
   0% { background-position: 0 0; }
@@ -275,11 +268,13 @@ footer .big-emoji {
   font-size: 0.8rem;
   color: #77cc77;
   text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-terms-link:hover {
   color: #f9c74f;
   text-decoration: underline;
+  text-shadow: 0 0 4px #f9c74f, 0 0 10px #ffeb3b;
 }
 
 a {
@@ -309,7 +304,7 @@ a:hover {
 }
 
 .space-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
