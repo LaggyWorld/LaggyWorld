@@ -76,16 +76,36 @@ header p {
 }
 
 .player-count {
-  background-color: #181818;
-  padding: 0.7rem 1.2rem;
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%),
+              url('https://www.transparenttextures.com/patterns/stardust.png');
+  background-blend-mode: overlay;
+  background-size: cover;
+  padding: 0.8rem 1.3rem;
   border: 2px solid #00ff00;
   border-radius: 6px;
   color: #00ff00;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  font-family: 'Press Start 2P', cursive;
   position: absolute;
   top: 20px;
   right: 20px;
+  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff66;
+  box-shadow: 0 0 12px #00ff00;
+  animation: spacePulse 1.8s ease-in-out infinite alternate;
+  z-index: 10;
 }
+
+@keyframes spacePulse {
+  0% {
+    box-shadow: 0 0 8px #00ff00, 0 0 14px #00ff66;
+    text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff66;
+  }
+  100% {
+    box-shadow: 0 0 16px #33ff99, 0 0 28px #00ffcc;
+    text-shadow: 0 0 6px #33ff99, 0 0 12px #00ffcc;
+  }
+}
+
 
 .card {
   background-color: #2a2a2a;
@@ -151,7 +171,7 @@ header p {
 
 .popup-overlay {
   position: fixed;
-  top: -40px; 
+  top: 0px; 
   left: 0;
   width: 100%;
   height: 100%;
