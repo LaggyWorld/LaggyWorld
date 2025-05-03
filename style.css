@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Press Start 2P', cursive;
   background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  background-size: 400px 400px;
+  background-size: 200px 400px;
   animation: fadeInZoom 0.6s ease forwards, starScroll 60s linear infinite;
   color: #f5f5f5;
   line-height: 1.6;
@@ -33,7 +33,7 @@ html {
 
 header {
   background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  background-size: 400px; /* Cover should be avoided for this effect */
+  background-size: 200px; /* Cover should be avoided for this effect */
   padding: 3rem 1rem 2.5rem;
   border-bottom: 4px solid #222;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
