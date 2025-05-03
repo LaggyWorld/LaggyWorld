@@ -20,7 +20,7 @@
     <p>
       Pure chaos, zero pay to win, and laggy survival madness. Get ready to build, battle, and glitch your way to greatness.
     </p>
-    <button onclick="closePopup()">🚀 Let’s Go!</button>
+    <button onclick="togglePopup()">🚀 Let’s Go!</button>
     <br />
     <a href="terms-of-service.html" style="display: inline-block; margin-top: 5px;">Terms of Service</a>
   </div>
@@ -37,23 +37,20 @@
 <main>
   <section class="card">
     <h2><span class="big-emoji">🌍</span> About the Server</h2>
-    <p>LaggyWorld is an epic, unpredictable Minecraft survival server where chaos reigns! <span class="big-emoji">🌍</span> No(P2W) nonsense just pure survival fun. Build your dream world, survive the wild, hunt for resources, and embrace the madness of lag as you explore, battle, and thrive in this ever changing landscape!</p>
+    <p>LaggyWorld is an epic, unpredictable Minecraft survival server where chaos reigns! <span class="big-emoji">🌍</span> No P2W nonsense, just pure survival fun. Build your dream world, survive the wild, hunt for resources, and embrace the madness of lag as you explore, battle, and thrive in this ever-changing landscape!</p>
   </section>
 
-  <section class="card" style="font-size: 3em; font-weight: bold; text-align: center; padding: 20px;">
+  <section class="card">
     <h2><span class="big-emoji">📜</span> IP Address</h2>
     <p>
       <strong>
         <a href="minecraft://N/A" style="font-size: 2em; text-decoration: none; color: inherit;">
           N/A
         </a>
-        <a href="https://minecraft-mp.com/server-s343226" target="_blank" class="vote-link" style="margin-top: 5px; color: rgb(187, 228, 7);">
-          Vote Link 1</a>
-        <a href="https://minecraftservers.org/server/671544" target="_blank" class="vote-link" style="margin-top: 5px; color: rgb(221, 224, 16);">
-          Vote Link 2</a>        
+        <a href="https://minecraft-mp.com/server-s343226" target="_blank" class="vote-link" style="color: rgb(187, 228, 7);">Vote Link 1</a>
+        <a href="https://minecraftservers.org/server/671544" target="_blank" class="vote-link" style="color: rgb(221, 224, 16);">Vote Link 2</a>        
       </strong>
     </p>
-    
   </section>
 
   <section class="card">
@@ -64,8 +61,8 @@
 
   <section class="card">
     <h2><span class="big-emoji">📞</span> Discord</h2>
-    <p>Have questions or need help? Reach us at <a style="color: aqua;" href="https://discord.gg/2f5PEQA8SV">Discord@laggyworld.net</a></p><a style="color: rgb(225, 0, 255);" href="contact.html">Froms</a></p>
-    
+    <p>Have questions or need help? Reach us at <a style="color: aqua;" href="https://discord.gg/2f5PEQA8SV">Discord@laggyworld.net</a></p>
+    <a style="color: rgb(225, 0, 255);" href="contact.html">Forms</a>
   </section>
 </main>
 
@@ -93,54 +90,53 @@
         });
       }
     });
-  });
-</script>
 
-<script>
-  function openPopup() {
-    document.getElementById("rulesPopup").style.display = "flex";
-    document.body.classList.add("popup-open");
-  }
-  
-  function closePopup() {
-    document.getElementById("rulesPopup").style.display = "none";
-    document.body.classList.remove("popup-open");
-    sessionStorage.setItem("rulesShown", "true");
-  }
-  
-  window.addEventListener("load", () => {
+    // Show popup on first visit
     if (!sessionStorage.getItem("rulesShown")) {
-      openPopup();  
+      togglePopup();  
     } else {
       document.getElementById("rulesPopup").style.display = "none"; 
     }
-  });
-  </script>
 
-<script>
-  async function getPlayerCount() {
-    try {
-      const response = await fetch('https://api.mcsrvstat.us/2/N/A');
-      const data = await response.json();
-      const countElement = document.getElementById('playerCount');
+    async function getPlayerCount() {
+      try {
+        const response = await fetch('https://api.mcsrvstat.us/2/N/A');
+        const data = await response.json();
+        const countElement = document.getElementById('playerCount');
 
-      if (data.online) {
-        const players = data.players.online;
-        const max = data.players.max;
-        countElement.textContent = `🌐 ${players} / ${max}`;
-      } else {
-        countElement.textContent = "🔴 Server Offline";
+        if (data.online) {
+          const players = data.players.online;
+          const max = data.players.max;
+          countElement.textContent = `🌐 ${players} / ${max}`;
+        } else {
+          countElement.textContent = "🔴 Server Offline";
+        }
+      } catch (error) {
+        document.getElementById('playerCount').textContent = "⚠️ Error";
       }
-    } catch (error) {
-      document.getElementById('playerCount').textContent = "⚠️ Error";
     }
+
+    getPlayerCount();
+    setInterval(getPlayerCount, 30000);
+  });
+
+  function togglePopup() {
+    const popup = document.getElementById("rulesPopup");
+    popup.style.display = popup.style.display === "flex" ? "none" : "flex";
+    sessionStorage.setItem("rulesShown", "true");
   }
-
-
   
-  getPlayerCount();
-  setInterval(getPlayerCount, 30000);
+  document.addEventListener("DOMContentLoaded", function() {
+    const laggyElements = document.querySelectorAll('.laggy-transition');
+    
+    laggyElements.forEach((element, index) => {
+      setTimeout(() => {
+        element.style.animationPlayState = "running";  // Enable animation
+      }, Math.random() * 2000);  // Random delay for lag
+    });
+  });
 </script>
+
 
 </body>
 </html>
