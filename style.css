@@ -215,10 +215,60 @@ body.popup-open > *:not(.popup-overlay) {
 }
 
 footer {
-  background-color: #111;
-  padding: 1.5rem 1rem;
-  font-size: 0.5rem;
-  color: #888;
+  background: linear-gradient(180deg, #000000, #0a0a0a, #1a1a1a);
+  border-top: 3px solid #00ff00;
+  padding: 2rem 1rem;
+  color: #8aff8a;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.65rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -5px 15px rgba(0, 255, 0, 0.3);
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 255, 0, 0.05),
+    rgba(0, 255, 0, 0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  animation: scanlines 6s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes scanlines {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
+}
+
+footer a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px #00ffcc;
+}
+
+footer .big-emoji {
+  font-size: 1.2em;
+  position: relative;
+  top: -2px;
 }
 
 .footer-terms-link {
