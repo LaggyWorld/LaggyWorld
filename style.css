@@ -33,7 +33,7 @@ html {
 
 header {
   background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  background-size: 100%; /* Cover should be avoided for this effect */
+  background-size: 400px; /* Cover should be avoided for this effect */
   padding: 3rem 1rem 2.5rem;
   border-bottom: 4px solid #222;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
