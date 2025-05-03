@@ -32,14 +32,17 @@ html {
 }
 
 header {
-  background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat;
   background-size: cover;
-  animation: starScroll 120s linear infinite;
-  padding: 3rem 1rem 2.5rem;
-  border-bottom: 4px solid #222;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-  position: relative;
-  z-index: 1;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+  animation-timing-function: linear;
 }
 
 @keyframes starScroll {
