@@ -184,13 +184,14 @@ header p {
 
 .popup-box {
   background: #2e2e2e;
-  padding: 30px;
+  padding: 40px 30px; /* Increased vertical padding */
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
   text-align: center;
   animation: laggyMove 1s infinite alternate;
   max-width: 90%;
-  width: 400px;
+  width: 500px; /* Slightly wider for longer text */
+  line-height: 1.6; /* More line spacing for readability */
 }
 
 .popup-button {
