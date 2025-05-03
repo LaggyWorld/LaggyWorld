@@ -42,6 +42,15 @@ header {
   animation: starScroll 120s linear infinite;
 }
 
+@keyframes starScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 1000px;
+  }
+}
+
 header h1 {
   font-size: 2.2rem;
   margin: 0.5rem 0;
@@ -78,6 +87,7 @@ header p {
   border-radius: 6px;
   color: #00ff00;
   font-size: 0.8rem;
+  font-family: 'Press Start 2P', cursive;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -236,10 +246,21 @@ footer::before {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: repeating-linear-gradient(45deg, rgba(0, 255, 0, 0.05), rgba(0, 255, 0, 0.05) 2px, transparent 2px, transparent 4px);
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 255, 0, 0.05),
+    rgba(0, 255, 0, 0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
   animation: scanlines 6s linear infinite;
   pointer-events: none;
   z-index: 0;
+}
+
+@keyframes scanlines {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(20px, 20px); }
 }
 
 footer a {
@@ -320,6 +341,15 @@ a:hover {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -428,10 +458,5 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  animation: greenPulse 1.8s infinite;
-}
-
-* {
-  scrollbar-color: #15ff00 #111;
-  scrollbar-width: thin;
+  animation: greenPulse 2s infinite ease-in-out;
 }
