@@ -190,7 +190,7 @@ header p {
   text-align: center;
   animation: laggyMove 1s infinite alternate;
   max-width: 90%;
-  width: 500px; /* Slightly wider for longer text */
+  width: 800px; /* Slightly wider for longer text */
   line-height: 1.6; /* More line spacing for readability */
 }
 
