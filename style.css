@@ -175,10 +175,11 @@ header p {
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   display: flex; 
-  align-items: center;
+  align-items: flex-start; /* Align items to the top */
   justify-content: center;
   z-index: 9999;
   animation: screenShake 0.5s infinite alternate;
+  padding-top: 50px; /* Add space from the top */
 }
 
 .popup-box {
@@ -187,7 +188,6 @@ header p {
   border-radius: 20px;
   box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
   text-align: center;
-  transform: rotate(-1deg);
   animation: laggyMove 1s infinite alternate;
   max-width: 90%;
   width: 400px;
