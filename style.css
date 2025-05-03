@@ -1,8 +1,10 @@
-  body {
+body {
   margin: 0;
   padding: 0;
   font-family: 'Press Start 2P', cursive;
-  background-color: #1f1f1f;
+  background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  background-size: cover;
+  animation: fadeInZoom 0.6s ease forwards, starScroll 60s linear infinite;
   color: #f5f5f5;
   line-height: 1.6;
   text-align: center;
@@ -11,7 +13,6 @@
   overflow-x: hidden;
   opacity: 0;
   transform: scale(0.98);
-  animation: fadeInZoom 0.6s ease forwards;
 }
 
 html {
@@ -196,6 +197,10 @@ body.popup-open > *:not(.popup-overlay) {
   100% { transform: translateX(2px) translateY(2px); }
 }
 
+@keyframes starScroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
 
 footer {
   background-color: #111;
