@@ -189,6 +189,8 @@ header p {
   text-align: center;
   transform: rotate(-1deg);
   animation: laggyMove 1s infinite alternate;
+  max-width: 90%;
+  width: 400px;
 }
 
 .popup-button {
@@ -200,6 +202,7 @@ header p {
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s, transform 0.2s;
+  margin-top: 20px;
 }
 
 .popup-button:hover {
