@@ -376,6 +376,27 @@ a:hover {
   color: #15ff00;
 }
 
+.lock-effect {
+  display: inline-block;
+  font-size: 3rem;
+  color: #15ff00;
+  animation: lockAnimation 3s ease-in-out infinite alternate;
+}
+
+@keyframes lockAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+    color: #ff0000; /* Red color during rotation */
+  }
+  100% {
+    transform: rotate(0deg);
+    color: #15ff00; /* Back to green after full rotation */
+  }
+}
+
 @keyframes typeIn {
   0% {
     max-height: 0;
