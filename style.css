@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Press Start 2P', cursive;
   background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-  background-size: 600px 600px;
+  background-size: 800px 800px;
   animation: fadeInZoom 0.6s ease forwards, starScroll 60s linear infinite;
   color: #f5f5f5;
   line-height: 1.6;
