@@ -32,6 +32,11 @@
       <label for="message">📝 Your Message</label>
       <textarea name="message" id="message" rows="6" required style="padding: 10px; font-family: 'Press Start 2P', cursive; background-color: black; color: #00ff00; border: 2px solid #00ff00;"></textarea>
 
+      <label style="display: flex; align-items: center; gap: 10px;">
+        <input type="checkbox" name="wantsUpdates" value="Yes">
+        ✅ I'd like to receive server updates to my email
+      </label>
+
       <!-- Anti-bot honeypot -->
       <input type="text" name="_gotcha" style="display:none">
 
@@ -43,29 +48,41 @@
 </main>
 
 <footer>
-  <p>© 2025 LaggyWorld. Made with <span class="big-emoji">❤️</span> and redstone.</p>
+  <p>© 2025 LaggyWorld. Made with <span class="big-emoji">❤️</span> and blocks.</p>
   <a href="index.html">Home</a> |
+  <a href="map.html">map</a> |
   <a href="terms-of-service.html">Terms of Service</a> |
   <a href="privacy-policy.html">Privacy</a>
 </footer>
 
 <script>
-  document.querySelector('.contact-form').addEventListener('submit', function (e) {
-    const email = document.getElementById('email').value.toLowerCase();
-    const fakeDomains = [
-      'tempmail.com',
-      '10minutemail.com',
-      'mailinator.com',
-      'dispostable.com',
-      'fakeinbox.com',
-      'guerrillamail.com',
-      'trashmail.com'
-    ];
-    if (fakeDomains.some(domain => email.endsWith('@' + domain))) {
-      alert('🚫 Please use a real email address, not a temporary one.');
-      e.preventDefault();
+  async function getFakeDomains() {
+    try {
+      const response = await fetch('https://disposable.github.io/disposable-email-domains/domains.txt');
+      const text = await response.text();
+      return text.split('\n').map(domain => domain.trim().toLowerCase());
+    } catch (error) {
+      console.error("Failed to fetch fake domains list:", error);
+      return []; 
     }
-  });
+  }
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value.toLowerCase();
+    const fakeDomains = await getFakeDomains();
+
+    const domain = email.split('@')[1];
+    if (fakeDomains.includes(domain)) {
+      alert('🚫 Please use a real email address, not a temporary one.');
+    } else {
+      document.querySelector('.contact-form').submit(); // submit the form if email is valid
+    }
+  }
+
+  // Bind submit event
+  document.querySelector('.contact-form').addEventListener('submit', handleSubmit);
 
   async function getPlayerCount() {
     try {
