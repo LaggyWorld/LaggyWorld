@@ -4,7 +4,7 @@ body {
   font-family: 'Press Start 2P', cursive;
   background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
   background-size: 800px 800px;
-  animation: fadeInZoom 0.6s ease forwards, starScroll 60s linear infinite;
+  animation: fadeInZoom 1.2s ease-out forwards, starScroll 60s linear infinite;
   color: #f5f5f5;
   line-height: 1.6;
   text-align: center;
@@ -12,7 +12,9 @@ body {
   position: relative;
   overflow-x: hidden;
   opacity: 0;
-  transform: scale(0.98);
+  transform: scale(0.8);
+  filter: blur(4px); 
+  will-change: opacity, transform, filter; 
 }
 
 html {
@@ -340,11 +342,13 @@ a:hover {
 @keyframes fadeInZoom {
   0% {
     opacity: 0;
-    transform: scale(0.98);
+    transform: scale(0.8);
+    filter: blur(4px);
   }
   100% {
     opacity: 1;
     transform: scale(1);
+    filter: blur(0);
   }
 }
 
