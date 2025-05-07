@@ -15,7 +15,7 @@ body {
   transform: scale(0.8);
   filter: blur(4px); 
   will-change: opacity, transform, filter; 
-  cursor: url('https://drive.google.com/file/d/1rwHIs8w8Ml4cyvV_7yd-5qtu0ZghMBJm/view?usp=sharing'), auto;
+  cursor: url('Mouse.png'), auto;
 }
 
 html {
