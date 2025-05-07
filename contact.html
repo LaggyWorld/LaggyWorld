@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="contact-page">
+
 
 <header>
   <div class="player-count" id="playerCount">Loading...</div>
@@ -24,25 +25,22 @@
       action="https://formspree.io/f/xdkgnelb"
       method="POST"
       class="contact-form"
-      style="display: flex; flex-direction: column; gap: 20px;"
     >
-      <label for="email">📧 Your Email</label>
-      <input type="email" name="email" id="email" required style="padding: 10px; font-family: 'Press Start 2P', cursive; background-color: black; color: #00ff00; border: 2px solid #00ff00;">
+      <label for="email"><span class="big-emoji">📧</span> Your Email</label>
+      <input type="email" name="email" id="email" required>
 
-      <label for="message">📝 Your Message</label>
-      <textarea name="message" id="message" rows="6" required style="padding: 10px; font-family: 'Press Start 2P', cursive; background-color: black; color: #00ff00; border: 2px solid #00ff00;"></textarea>
+      <label for="message"><span class="big-emoji">📝</span> Your Message</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
 
-      <label style="display: flex; align-items: center; gap: 10px;">
-        <input type="checkbox" name="wantsUpdates" value="Yes">
-        ✅ I'd like to receive server updates to my email
-      </label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="updates" name="Receive Server Updates" value="Yes">
+        <label for="updates"> I'd like to receive server updates??</label>
+      </div>
 
       <!-- Anti-bot honeypot -->
       <input type="text" name="_gotcha" style="display:none">
 
-      <button type="submit" style="padding: 12px; font-family: 'Press Start 2P', cursive; background-color: #00ff00; color: black; border: none; cursor: pointer;">
-        🚀 Send Message
-      </button>
+      <button type="submit">🚀 Send Message</button>
     </form>
   </section>
 </main>
@@ -63,7 +61,7 @@
       return text.split('\n').map(domain => domain.trim().toLowerCase());
     } catch (error) {
       console.error("Failed to fetch fake domains list:", error);
-      return []; 
+      return [];
     }
   }
 
@@ -72,14 +70,15 @@
 
     const email = document.getElementById('email').value.toLowerCase();
     const fakeDomains = await getFakeDomains();
-
     const domain = email.split('@')[1];
+
     if (fakeDomains.includes(domain)) {
       alert('🚫 Please use a real email address, not a temporary one.');
     } else {
-      document.querySelector('.contact-form').submit(); // submit the form if email is valid
+      document.querySelector('.contact-form').submit();
     }
   }
+
   document.querySelector('.contact-form').addEventListener('submit', handleSubmit);
 
   async function getPlayerCount() {
