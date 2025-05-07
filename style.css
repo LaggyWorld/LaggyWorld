@@ -15,11 +15,11 @@ body {
   transform: scale(0.8);
   filter: blur(4px); 
   will-change: opacity, transform, filter; 
-  cursor: url('Mouse.png'), auto;
 }
 
 html {
   font-size: 16px;
+  cursor: url('Mouse.png'), auto;
 }
 
 @media (max-width: 768px) {
