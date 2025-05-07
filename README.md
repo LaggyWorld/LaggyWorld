@@ -1,7 +1,7 @@
 # 🌍 LaggyWorld — The Last *Real* Minecraft Server
 
 **Welcome to LaggyWorld**, the **ONLY 100% free** Minecraft experience that stays true to what the game was always meant to be creative, chaotic, and community driven.  
-No paywalls. No VIP scams. Just pure Minecraft.
+No paywalls. No VIP scams. **Just pure Minecraft.**
 
 ---
 
@@ -24,9 +24,6 @@ So we created something better for **players**, not profit.
 
 We welcome **everyone**. Whether you’re a redstone nerd, PvP god, or survival grinder this world is yours.  
 So bring your friends, build your base, and help us make Minecraft wild again.
-
-🔗 [Server IP / Website / Discord]  
-*(https://laggyworld.github.io/LaggyWorld/index.html)*
 
 ---
 
