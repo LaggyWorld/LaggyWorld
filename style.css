@@ -19,8 +19,9 @@ body {
 
 html {
   font-size: 16px;
-  cursor: url('Mouse.png'), auto;
-  cursor: url('Mouse.png'), pointer;
+  cursor: url('MousePngs/customcursor.png'), default;
+  cursor: url('MousePngs/customcursor_hand.png'), pointer;
+  cursor: url('MousePngs/customcursor_beam.png'), text;
 }
 
 @media (max-width: 768px) {
