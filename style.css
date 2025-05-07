@@ -15,13 +15,33 @@ body {
   transform: scale(0.8);
   filter: blur(4px); 
   will-change: opacity, transform, filter; 
-  cursor: url('MousePngs/customcursor.png'), default;
+ 
 }
+
+
+body {
+  cursor: url('MousePngs/customcursor.png'), auto;
+}
+
+
+a,
+button,
+.donate-button,
+.floating-home-button,
+.popup-button {
+  cursor: url('MousePngs/customcursor_hand.png'), pointer;
+}
+
+
+input[type="text"],
+textarea {
+  cursor: url('MousePngs/customcursor_beam.png'), text;
+}
+
 
 html {
   font-size: 16px;
-  cursor: url('MousePngs/customcursor_hand.png'), pointer;
-  cursor: url('MousePngs/customcursor_beam.png'), text;
+
 }
 
 @media (max-width: 768px) {
